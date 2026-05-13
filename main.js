@@ -15,15 +15,11 @@ let pAlan = new pessoa( "alan turing", 41);
 let aAlan = new pessoa ("alan turing", 41, "ciencia da computação");
 
 if ('sw' in navigator){
-    navigator.serviceWorker.register('./sw.js')
-    .then(function(registration){
-        console.log('Service Worker registrado com sucesso')
-    })
-    .catch(function(error){
-        console.log('Falha ao registrar o Service worker')
+    window.addEventListener('load', ()=>{
+        navigator.serviceWorker.register('./sw.js')
+        .then(reg => console.log('Service Worker registrado com sucesso', reg))
+        .catch(err => console.log( 'Falha ao registrar o Service worker:', err));
     });
-} else{
-    console.log('Service Workers não são suportados')
 }
 console.log(pAlan);
 console.log(aAlan);
