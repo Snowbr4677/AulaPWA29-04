@@ -3,9 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
     <title>Document</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/funny.jpg" type="image/x-icon">
+    <script src="main.js" type="module"></script>
 </head>
 <body>
-    <h1>Primeiro PWA</h1>
+    <!-- Tela de login-->
+     <section id="conteudo">
+        <form id="formLogin">
+            <h2 align="center">Login</h2>
+            <fieldset>
+                <label for="e-mail">E-mail</label>
+                <input type="email" id="e-mail" name="e-mail" required>
+            </fieldset>
+            <fieldset>
+                <label for="Senha">Senha</label>
+                <input type="password" id="senha">
+            </fieldset>
+            <br>
+            <button id="botao" type="submit">Enviar</button>
+        </form>
+     </section>
 </body>
 </html>
